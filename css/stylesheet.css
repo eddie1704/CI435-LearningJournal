@@ -1,0 +1,253 @@
+/*sections------------------------------------------------------------------- */
+body {background-color: #F0F0F0;
+  font-family: 'Verdana', sans-serif;
+  color: #333;
+  font-size: 16px;
+  line-height: 20px;
+}
+#wrapper {max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #FFF;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+main  {grid-area: main;
+}
+article	{
+}
+aside	{grid-area: aside;
+}
+footer {grid-area: footer;
+}
+header {
+	background-color: rgba(191,191,191,1);
+}
+.post	{margin-top: 2px;
+	margin-bottom: 2px;
+	background-color: #CCC;
+	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(106,106,106,1) 100%);
+}
+nav	{grid-area: nav;
+}
+.menu	{grid-area: menu;
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(106,106,106,1) 100%);
+}
+/*headings------------------------------------------------------------------- */
+h1	{font-family: 'Ubuntu', sans-serif;
+  color: #003cff;
+  font-size: 3em;
+  line-height: 2em;
+}
+h2	{font-family: 'Ubuntu', sans-serif;
+  color: #003cff;
+  font-size: 1.5em;
+  line-height: 1.7em;
+}
+h3 	{font-family: 'Ubuntu', sans-serif;
+  color: #003cff;
+  font-size: 1.5em;
+  line-height: 1.7em;
+}
+/*grouping------------------------------------------------------------------- */
+p	{font-family: 'Verdana', sans-serif;
+ font-size:1rem;
+ line-height: 1.5;
+ margin: 10px 0 10px 0;
+ text-indent: 2em;
+}
+blockquote	{
+}
+table   {border: 1px solid black;
+		grid-area: table;
+}
+/*lists---------------------------------------------------------------------- */
+ul	{
+}
+li	{
+}
+ol	{
+}
+dl	{
+}
+dt	{
+}
+dd	{
+}
+/*text------------------------------------------------------------------------ */
+em	{
+}
+strong	{
+}
+small	{
+}
+cite	{
+}
+time	{
+}
+/*image----------------------------------------------------------------------- */
+figure	{
+}
+figcaption	{
+}
+img	{ max-width: 100%; 
+}
+/*anchors--------------------------------------------------------------------- */
+a:link	{
+}
+a:visited {
+}
+a:hover {
+}
+a:active {
+}
+
+.menu li	{
+  list-style-type: none;
+  font-size: 18px;
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
+.menu a {
+  color: #003cff;
+  padding: 5px;
+  margin-right: 4px;
+  text-decoration: none;
+  border: 2px solid #0090D2;
+  border-radius: 3px;
+}
+.menu a:hover {
+  background-color: #0090D2;
+  color: #FFF;
+}
+p.dropcap:first-letter	{
+  float: left;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color:#F00;
+  font-size: 5em;
+  line-height: 0.2;
+  margin: 8px 5px 0 0;
+}
+.fltlt {
+ float: left;
+ margin-right: 8px;
+}
+ .clear {
+ clear: both;
+}
+.banner {grid-area: banner;
+}
+#wrapper {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+   "banner"
+   "menu"
+   "nav"
+   "table"
+   "main"
+   "aside"
+   "footer";
+}
+@media (min-width: 50em) {
+  #wrapper {
+    grid-template-columns: 3fr 6fr;
+    grid-template-areas: 
+      "banner  banner"
+      "menu  menu"
+      "nav  table"
+      "aside  main"
+      "footer  footer";
+  }
+}
+@media (min-width: 60em) {
+  #wrapper {
+    grid-template-columns: 3fr 5fr 3fr;
+    grid-template-areas: 
+      "banner  banner  banner"
+      "menu  menu  menu"
+      "nav  table  aside"
+      "main  main  main"
+      "footer  footer  footer";
+   }
+}
+@media (min-width: 50em)
+{
+ .banner { padding: 0 0 0 3em; }
+/* Menu navigation - inline layout for wider screens */	
+ .menu { padding: 1em 0 1em 3em; }
+ .menu li
+ {
+  display: inline;
+  margin: 0 1em 0 0;
+ }
+ .menu a
+ {
+  display: inline;
+  padding: 0;
+  border-bottom: 0;
+ }
+}
+@media (max-width: 35em) {
+ table {
+  display:none;
+ }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  display: flex; 
+}
+.card-content {
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #003cff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 1.25em 1.25em 0.3em 0;
+  padding: 1em;
+}
+
+/*640 px - tablet portrait orientation - 2 columns*/
+@media screen and (min-width: 40em){
+  .card { width: 50%; }
+}
+/*960 px* - tablet landscape orientation and above - 3 columns*/
+@media screen and (min-width: 60em) {
+  .card { width: 33.33%; }
+}
+.media	{
+  margin: 0;
+  padding: 0;
+}
+.media li	{
+  margin: 0;
+  padding: 0;
+}
+
+label {display: block;}
+input {display: block;}
+input[type=text]{
+  border: 1px solid #003cff;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=email]{
+  border: 1px solid #003cff;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=url]{
+  border: 1px solid #003cff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+input[type=submit] {
+  background-color: #003cff;
+  color: white;
+  border-radius: 4px;
+}
